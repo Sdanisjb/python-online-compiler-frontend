@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{ url_for('send_code') }}" method="post">
+        <h1>Escribe tu código aquí</h1>
+        <textarea name="code"></textarea>
+        <button type="submit">Resultado</button>
+    </form>
+    
+    <div>
+        <h2>Output</h2>
+        <textarea readonly>{{result.std_output}}</textarea>
+        <h2>Resultado</h2>
+        <textarea readonly>{{result.result}}</textarea>
+        <h2>Errores</h2>
+        <textarea readonly>{{result.error_message}}</textarea>
+    </div>
+
+</body>
+</html>
