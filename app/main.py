@@ -14,7 +14,7 @@ def index():
 @ app.route('/send_code', methods=['POST'])
 def send_code():
     code_solved = requests.post(
-        "http://127.0.0.1:4000/compile", json={"code": request.form['code']})
+        "http://backend.default.svc.cluster.local/compile", json={"code": request.form['code']})
     return render_template('index.html', result=code_solved.json())
 
 
